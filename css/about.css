@@ -1,0 +1,10 @@
+
+.image{
+    margin-top: 80px;
+    margin-left: 70px;
+}
+img{
+    border-radius: 50%;
+    height: 40%;
+    width: 30%;
+}

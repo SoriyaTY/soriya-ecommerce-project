@@ -57,10 +57,14 @@ ul li:hover {
     flex-direction: row;
     margin-right: 50px;
 }
-.icon i{
+.icon button{
     margin-right: 20px;
+    padding: 8px;
 }
-
+button{
+    background: rgb(151, 151, 153);
+    border: none;
+}
 
 /* main */
 .main-card{
