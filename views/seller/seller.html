@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage</title>
+    <link rel="stylesheet" href="seller.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <nav>
+        <a href="../../index.html"><img src="../../images/logo 1.png" /></a>
+        <ul>
+            <li><a href="../customer/customer.html">CUSTOMER</a></li>
+            <li><a href="seller.html" class="active">SELLER</a></li>
+        </ul>
+    </nav>
+    <div id="edit-view">
+        <div id="questions-view">
+            <button id="add">Add question</button>
+          <div id="questions-container"></div>
+        </div>
+    </div>
+    <form action="#" style="display: none;">
+        <label for="products-name">Title</label>
+        <input type="text" id="products-name" placeholder="Book Name" required>
+        <label for="products-price">Price</label>
+        <input type="number" id="products-price" placeholder="Book Price" required>
+        <label for="products-photo">Image</label>
+        <input type="url" id="products-photo" placeholder="Book Image">
+        <button id="sav">SAVE</button>
+        <button id="edit" class="hide">Edit</button>
+    </form>
+</body>
+<script src="seller.js" defer></script>
+
+</html>

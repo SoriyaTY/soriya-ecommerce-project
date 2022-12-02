@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+}
+body{
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card {
+    flex-basis: 29%;
+    padding: 10px;
+    border-radius: 7px;
+}
+.mt-5 {
+    margin-top: 100px;
+}
+.title {
+    font-weight: 500;
+    text-transform: uppercase;
+    /* margin-left: 70px; */
+    text-align: center;
+}
+.card-body {
+    padding: 10px;
+    margin: 0 auto;
+}
+.qty {
+    width: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: 100px;
+    background: red;
+}
+.price {
+    margin-left: 80px;
+    width: 50px;
+    padding: 10px;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.card:hover{
+    background: rgb(223, 219, 219);
+    height: 50vh;
+    cursor: pointer;
+}
+img{
+    width: 60%;
+}
+/* #asanta{
+    width: 16%;
+} */
