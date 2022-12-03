@@ -127,3 +127,19 @@ btn.addEventListener('click', addbooks);
 document.addEventListener('DOMContentLoaded', displayBooks)
 document.addEventListener('click',displayformadd)
 // btnEdit.addEventListener('click',editbooks)
+
+const search = document.querySelector('#search')
+function searchTask() {
+    let text = search.value.toLowerCase();
+    let tasks = document.querySelectorAll(".card-body");
+    for (let task of tasks) {
+        let taskTitle = task.textContent.toLowerCase();
+        console.log(taskTitle)
+        if (taskTitle.indexOf(text) === -1) {
+            task.style.display = "none";
+        } else {
+            task.style.display = "block";
+        }
+    }
+}
+  search.addEventListener("keyup", searchTask);

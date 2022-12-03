@@ -7,6 +7,7 @@ function createCard(title, price, imgs) {
     const image = document.createElement('a');
     image.href = "../detail/detail.html"
     const card = document.createElement('div');
+
     card.classList.add('card');
 
     const titleElement = document.createElement('div');
