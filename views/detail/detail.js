@@ -8,7 +8,7 @@ function displayDetialBook() {
         nameOfBook.textContent = index.name;
         priceOfBook.textContent = "$" + index.price;
         imageOfBook.src = index.img;
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => { displayDetialBook(); });
+        localStorage.getItem('bookaname')
+    };
+};
+document.addEventListener('DOMContentLoaded', displayDetialBook);

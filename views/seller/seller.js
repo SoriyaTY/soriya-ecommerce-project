@@ -62,14 +62,11 @@ function createcard(){
         edit.src = "../../images/edit.svg";
         edit.id = 'edit';
         edit.addEventListener('click',(e)=>{
-            e.preventDefault()
-            productList[id].title = booksname.value;
-            productList[id].price = booksprice.value;
-            productList[id].img = booksphoto.value;
-            localStorage.setItem('booksname',JSON.stringify('productsList'));
-            btn.classList.add('show');
-            btnEdit.classList.add('hide');
-            displayBooks();
+            let index = e.target.parentElement.parentElement.dataset.index;
+            productList.splice(index, 1)
+            addBookToLocal("booksname",JSON.stringify(productList));
+            show(form);
+            hide(bookData)
         })
 
         let trash = document.createElement('img');
@@ -125,18 +122,6 @@ function addbooks(e){
     hide(form);
     show(bookData)
 }
-let id = null;
-// function editbooks(e){
-//     e.preventDefault()
-//     productList[id].title = product.value;
-//     productList[id].price = product.value;
-//     productList[id].img = product.value;
-//     localStorage.setItem('booksname',JSON.stringify('productsList'));
-//     btn.classList.add('show');
-//     btnEdit.classList.add('hide');
-//     displayBooks();
-// }
-
 // event -----------------------------------------
 btn.addEventListener('click', addbooks);
 document.addEventListener('DOMContentLoaded', displayBooks)

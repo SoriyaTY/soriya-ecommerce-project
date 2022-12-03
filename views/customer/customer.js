@@ -61,19 +61,34 @@ function detailBook() {
 const container = document.querySelector('#container');
 document.addEventListener('DOMContentLoaded',  displayBook);
 document.addEventListener('DOMContentLoaded',() => {
-    detailBook()
-    createCard()
-})
+    detailBook();
+    createCard();
+});
 
 function detailproducts() {
     const books = document.querySelectorAll('.main-title');
-    const singleBook = JSON.parse(localStorage.getItem('booksname')) ?? {};
+    const productList = JSON.parse(localStorage.getItem('booksname')) ?? {};
     for(let book of books) {
         book.addEventListener('click', (e) => {
-            singleBook.title = book.textContent;
-            singleBook.img = book.src;
-            localStorage.setItem('booksname', JSON.stringify(singleBook));
-            window.location.href = "../detail/detail.html";
+            productList.title = book.textContent;
+            productList.img = book.src;
+            localStorage.setItem('booksname', JSON.stringify(productList));
         });
+    };
+};
+const search = document.querySelector('#search')
+function searchTask() {
+    let text = search.value.toLowerCase();
+    let tasks = document.querySelectorAll(".card-body");
+    for (let task of tasks) {
+        let taskTitle = task.textContent.toLowerCase();
+        console.log(taskTitle)
+        if (taskTitle.indexOf(text) === -1) {
+            task.style.display = "none";
+        } else {
+            task.style.display = "block";
+        }
     }
 }
+  search.addEventListener("keyup", searchTask);
+
