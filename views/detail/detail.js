@@ -1,17 +1,17 @@
 const nameOfBook = document.querySelector('.title');
 const imageOfBook = document.querySelector('.image');
 const priceOfBook = document.querySelector('#price');
-const descOfBook = document.querySelector('#description');
+const descOfBook = document.querySelector('#descript');
+console.log(descOfBook)
 
 function displayDetialBook() {
-    let book = JSON.parse(localStorage.getItem('booksname')) ?? {};
-    for (let index of book){
-        nameOfBook.textContent = index.name;
-        priceOfBook.textContent = "$" + index.price;
-        imageOfBook.src = index.img;
-        descOfBook.textContent = index.description
-        localStorage.getItem('bookaname');
-    };
+    let book = localStorage.getItem('index');
+    let products = JSON.parse(localStorage.getItem('booksname'));
+    nameOfBook.textContent = products[book].name;
+    priceOfBook.textContent = "$" + products[book].price;
+    descOfBook.textContent = products[book].descript;
+    imageOfBook.src = products[book].img;
+    localStorage.getItem('index');
 };
 
 document.addEventListener('DOMContentLoaded', displayDetialBook);
